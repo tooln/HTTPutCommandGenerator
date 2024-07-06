@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTPut Command Formatter</title>
+    <title>HTTPut Command Generator</title>
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/3/34/Icon_hacker.png">
     <style>
         body {
@@ -78,7 +78,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>HTTPut Command Formatter</h1>
+        <h1>HTTPut Command Generator</h1>
         <input type="text" id="filepathInput" placeholder="Enter file path..." />
         <textarea id="wordsInput" placeholder="Enter words, one per line..."></textarea>
         <button onclick="generateCommands()">Generate Commands</button>
@@ -110,7 +110,7 @@
             const text = document.getElementById(elementId).textContent;
             navigator.clipboard.writeText(text)
                 .then(() => {
-                    alert('Copied to clipboard');
+                    console.log('Copied to clipboard');
                     button.classList.add('clicked');
                 })
                 .catch(err => console.error('Failed to copy:', err));
