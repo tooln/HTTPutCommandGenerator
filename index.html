@@ -90,7 +90,7 @@
         function generateCommands() {
             const filepath = document.getElementById('filepathInput').value.trim();
             const words = document.getElementById('wordsInput').value.split('\n').filter(word => word.trim());
-            const output = words.map(word => `go run main.go -file=${filepath}/${word.trim()} -output=${word.trim()}.output`).join(' && \n');
+            const output = words.map(word => `go run main.go -file=${filepath}/${word.trim()} -output=${word.trim()}`).join(' && \n');
             const lines = output.split('\n');
             let resultHTML = '';
 
